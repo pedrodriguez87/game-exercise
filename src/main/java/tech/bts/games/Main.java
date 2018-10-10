@@ -20,9 +20,9 @@ public class Main {
         games.add(g3);
         games.add(g4);
 
-        int columnWidth = 10;
+        int columnWidth = 15;
 
-        List<String> fieldNames = Arrays.asList("Name", "Players", "Price");
+        List<String> fieldNames = Arrays.asList("| Name", "| Players", "| Price");
 
         String title = "";
         for (String fieldName : fieldNames) {
@@ -35,9 +35,9 @@ public class Main {
         System.out.println(dots);
 
         for (Game game : games) {
-            String productline = StringUtil.padRight(game.getName(),columnWidth)
-                    + StringUtil.padRight("" + game.getNumPlayers(), columnWidth)
-                    + StringUtil.padRight("" + game.getPrice(), columnWidth);
+            String productline = StringUtil.padRight("| " + game.getName(),columnWidth)
+                    + StringUtil.padRight("| " + game.getNumPlayers(), columnWidth)
+                    + StringUtil.padRight("| " + game.getPrice() + "€", columnWidth);
             System.out.println(productline);
         }
         System.out.println(dots);
